@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>K-Means Clustering</title>
+</head>
+<body>
+<form method=POST action="/kmeans">
+    <div>
+        <label>Enter attribute 1:</label>
+        <input type="text"  name="attribute1" placeholder="Enter attribute 1">
+        <br><br>
+    </div>
+    <div>
+        <label>Enter attribute 2:</label>
+        <input type="text" name="attribute2" placeholder="Enter attribute 2">
+        <br><br>
+    </div>
+    <div>
+        Enter the number of clusters : <input type = "text" name="clusters">
+        <br><br>
+    </div>
+    <button type="submit">kmeans</button>
+    <br><br><br>
+    {%for i in disCluster %}
+        {{i.dist}}<br>
+    {% endfor %}
+    <br>
+
+    <br>
+    {%for i in pdict%}
+       No of points in cluster:{{i}}<br>
+    {% endfor %}
+    <br>
+    <br>
+    </form>
+
+    <form method=POST action="/show">
+        <button type="submit">Display Result</button>
+    </form>
+    <form method=POST action="/Bargraph">
+        <button type="submit">BarGraph</button>
+    </form>
+    <form method=POST action="/Piegraph">
+        <button type="submit">PieChart</button>
+    </form>
+
+</body>
+</html>
