@@ -23,17 +23,17 @@ from numpy import vstack,array
 from scipy.cluster.vq import *
 from werkzeug.utils import secure_filename
 
-hostname = 'shilpashreedb.mysql.database.azure.com'
-username = 'shilpahshree@shilpashreedb'
-password = 'shOne12#'
-database = 'clouddb'
+hostname = ''
+username = ''
+password = ''
+database = ''
 
 #myConnection = pymysql.connect( host=hostname, user=username, passwd=password, db=database, cursorclass=pymysql.cursors.DictCursor, local_infile=True)
 myConnection = pymysql.connect( host=hostname, user=username, passwd=password, db=database, cursorclass=pymysql.cursors.DictCursor, local_infile=True)
 print 'DB connected'
 
 #blob
-block_csv = BlockBlobService(account_name='resourcegroupnumberon311', account_key='MmC2fx5DZMWoaTP2lZFY2ja4CkfYxlvuklMLbekBpcSJKalvY8VO0wwQvSlfr4wduEhluVeV3v+pxuAbE+1cBA==')
+block_csv = BlockBlobService(account_name='', account_key='')
 print ('Blob connected')
 
 
